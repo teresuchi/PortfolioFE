@@ -1,0 +1,63 @@
+<section class="about section" id="about">
+    <span class="section-subtitle">Mi presentación</span>
+
+    <h2 class="section-title">Acerca de mí</h2>
+
+    <div class="about__container bd-grid">
+        <div class="about__data">
+            <p class="about__description">
+                <b>Hola, soy {{miPortfolio.nombre}}</b><br>
+                Fecha de nacimiento: {{miPortfolio.fecha}}<br>
+                Lugar de nacimiento: {{miPortfolio.lugar}}<br>
+                Dirección: {{miPortfolio.direccion}}<br>
+                Nacionalidad: {{miPortfolio.nacionalidad}}<br>
+                Estado civil: {{miPortfolio.estadoCivil}}<br>
+                CP: {{miPortfolio.cp}}
+            </p>
+            <img src="assets/img/Tere.JPG" alt="Fournier Teresa" title="Fournier Teresa"
+                class="about__img">
+        </div>
+
+        <div>
+            <div class="about__information">
+                <h3 class="about__information-title">Información</h3>
+
+                <div class="about__information-data">
+                    <i class='bx bxs-user about__information-icon'></i>
+                    <span>{{miPortfolio.apellido_y_nombre}}</span>
+                </div>
+
+                <div class="about__information-data">
+                    <i class='bx bxs-phone about__information-icon'></i>
+                    <span>{{miPortfolio.celular}} (Móvil)</span>
+                </div>
+
+                <div class="about__information-data">
+                    <i class='bx bxs-envelope about__information-icon'></i>
+                    <span>{{miPortfolio.mail}}</span>
+                </div>
+            </div>
+
+            <div class="about__information">
+                <h3 class="about__information-title">Experiencia laboral</h3>
+
+                <div class="about__information-data">
+                    <i class='bx bxs-medal about__information-icon'></i>
+                    <div>
+                        <span class="about__information-subtitle">{{miPortfolio.anios_de_trabajo}} años de trabajo</span>
+                        <span class="about__information-subtitle-small">Experiencia</span>
+                    </div>
+                </div>
+
+                <div class="about__information-data">
+                    <i class='bx bxs-briefcase about__information-icon'></i>
+                    <div>
+                        <span class="about__information-subtitle">{{miPortfolio.cantidad_de_proyectos}} proyectos</span>
+                        <span class="about__information-subtitle-small">Finalizados</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+{
+
+
+"apellido_y_nombre": "Fournier Teresa",
+"titulo": "Full Stack Developer JR",
+
+"nombre":"Teresa",
+"fecha":"5/11/1980",
+"lugar":"La Plata",
+"direccion":"522 n 1985, Tolosa",
+"nacionalidad":"Argentina",
+"estadoCivil":"Soltera",
+"cp":"1900",
+"celular":"221 6209682",
+"mail":"teresafournier80@gmail.com",
+"anios_de_trabajo":"0",
+"cantidad_de_proyectos":"0",  
+
+"frontend":[
+    {"titulo":"HTML/CSS", "porcentaje":"90%"},
+    {"titulo":"JAVASCRIPT", "porcentaje":"90%"},
+    {"titulo":"ANGULAR", "porcentaje":"80%"},
+    {"titulo":"TYPESCRIPT", "porcentaje":"80%"},
+    {"titulo":"BOOTSTRAP", "porcentaje":"80%"}
+ ],
+
+"backend":[
+    {"titulo":"JAVA", "porcentaje":"70%"},
+    {"titulo":"MYSQL", "porcentaje":"60%"},
+    {"titulo":"SPRINGBOOT", "porcentaje":"60%"}
+  ],
+
+"educacion":[
+    {"anio":"2021", "institucion":"Argentina Programa", "titulo":"Sé programar"},
+    {"anio":"2022", "institucion":"Argentina Programa", "titulo":"Yo programo"}
+  ],
+
+"servicio_1": {"titulo":"Diseño Web", "descripcion":"El diseño web es una actividad que consiste en la planificación, diseño, implementación y mantenimiento de sitios web."},
+"servicio_2": {"titulo":"Desarrollo del Frontend", "descripcion":"El desarrollo web frontend consiste  en la conversión de datos en una interfaz gráfica para que el usuario pueda ver e interactuar con la información de forma digital usando HTML, CSS y JavaScript."},
+"servicio_3": {"titulo":"Desarrollo del Backend", "descripcion":"El Backend es la parte del desarrollo web que se encarga de que toda la lógica de una página web funcione. Se trata del conjunto de acciones que pasan en una web pero que no vemos."},
+
+"trabajo_1": {"titulo":"Diseño de Aplicaciones"},
+"trabajo_2": {"titulo":"Sitio Web de la Agencia"},
+"trabajo_3": {"titulo":"Sitio Web de pago"},
+
+"ubicacion": "La Plata, Buenos Aires"
+
+}

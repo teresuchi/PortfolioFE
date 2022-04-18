@@ -1,0 +1,27 @@
+<section class="skills section" id="skills">
+    <span class="section-subtitle">Por qué elegirme</span>
+    <h2 class="section-title">Mi área de experiencia</h2>
+
+    <div class="skills__container bd-grid">
+        <div class="skills__content">
+            <h3 class="skills__subtitle">Frontend</h3>
+
+            <div class="skills__data" *ngFor="let registro of miPortfolio.frontend">
+                <span class="skills__name">{{registro.titulo}}</span>
+                <span class="skills__number">{{registro.porcentaje}}</span>
+                <span class="skills__bar skills__html"></span>
+            </div>
+        </div>
+
+        <div class="skills__content">
+            <h3 class="skills__subtitle">Backend</h3>
+
+            <div class="skills__data" *ngFor="let registro of miPortfolio.backend">
+                <span class="skills__name">{{registro.titulo}}</span>
+                <span class="skills__number">{{registro.porcentaje}}</span>
+                <span class="skills__bar skills__java"></span>
+            </div>
+
+        </div>
+    </div>
+</section>

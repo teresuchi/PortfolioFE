@@ -1,0 +1,25 @@
+<section class="education section" id="educación">
+    <span class="section-subtitle">Aptitud</span>
+    <h2 class="section-title">Mi Educación</h2>
+
+    <div class="education__container bd-grid">
+    <div class="education__content" *ngFor="let registro of miPortfolio.educacion">
+        <div>
+            <h3 class="education__year">{{registro.anio}}</h3>
+            <span class="education__university">{{registro.institucion}}
+                </span>
+        </div>
+
+        <div class="education__time">
+            <span class="education__rounder"></span>
+            <span class="education__line"></span>
+        </div>
+
+        <div>
+            <h3 class="education__race">{{registro.titulo}}</h3>
+            
+        </div>
+    </div>
+
+</div>
+</section>   
