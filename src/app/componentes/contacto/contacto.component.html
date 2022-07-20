@@ -3,31 +3,31 @@
         <h2 class="section-title">Póngase en contacto</h2>
 
    <div class="contact__container bd-grid">
-       <form action="#" class="contact__form">
+       <form action="#" class="contact__form" id="contactoForm" #contactoForm = "ngForm" (ngSubmit) = "onClickSubmit()">
            <div class="contact__inputs">
-               <input type="text" placeholder="Nombre" class="contact__input">
-               <input type="mail" placeholder="Email" class="contact__input">
+               <input type="text" placeholder="Nombre" name = "nombre" class="contact__input">
+               <input type="mail" placeholder="Email" name = "email" class="contact__input">
            </div>
 
-           <input type="text" placeholder="Asunto" class="contact__input">
-           <textarea placeholder="Mensaje" name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+           <input type="text" placeholder="Asunto" name = "asunto" class="contact__input">
+           <textarea placeholder="Mensaje" name="mensaje" id="" cols="0" rows="10" class="contact__input"></textarea>
            <input type="submit" value="Enviar mensaje" class="button contact__button">
        </form>
 
        <div>
            <div class="contact__info">
                <h3 class="contact__subtitle">Llámame</h3>
-               <span class="contact__text">{{miPortfolio.celular}}</span>
+               <span class="contact__text">{{miPortfolio.personaDTO.celular}}</span>
            </div>
 
            <div class="contact__info">
                <h3 class="contact__subtitle">E-mail</h3>
-               <span class="contact__text">{{miPortfolio.mail}}</span>
+               <span class="contact__text">{{miPortfolio.personaDTO.mail}}</span>
            </div>
 
            <div class="contact__info">
                <h3 class="contact__subtitle">Ubicación</h3>
-               <span class="contact__text">{{miPortfolio.ubicacion}}</span>
+               <span class="contact__text">{{miPortfolio.personaDTO.ubicacion}}</span>
            </div>
        </div>
    </div>

@@ -1,6 +1,5 @@
 {
 
-
 "apellido_y_nombre": "Fournier Teresa",
 "titulo": "Full Stack Developer JR",
 
@@ -13,8 +12,8 @@
 "cp":"1900",
 "celular":"221 6209682",
 "mail":"teresafournier80@gmail.com",
-"anios_de_trabajo":"0",
-"cantidad_de_proyectos":"0",  
+"aniosDeTrabajo":"0",
+"cantidadDeProyectos":"0",  
 
 "frontend":[
     {"titulo":"HTML/CSS", "porcentaje":"90%"},

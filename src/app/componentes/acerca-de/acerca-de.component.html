@@ -3,16 +3,92 @@
 
     <h2 class="section-title">Acerca de mí</h2>
 
+    <!-- Botón Editar-->
+    <div align="right" *ngIf=usuarioLogueado()>
+        <img width="20" height="20"
+        src="./assets/img/Editar.PNG" (click)="openEditarPersona(miPortfolio.personaDTO.id,
+                                                           miPortfolio.personaDTO.lugar,
+                                                           miPortfolio.personaDTO.direccion,
+                                                           miPortfolio.personaDTO.titulo,
+                                                           miPortfolio.personaDTO.nombre,
+                                                           miPortfolio.personaDTO.apellido,
+                                                           miPortfolio.personaDTO.fechaDeNacimiento,
+                                                           miPortfolio.personaDTO.nacionalidad,
+                                                           miPortfolio.personaDTO.estadoCivil,
+                                                           miPortfolio.personaDTO.cp,
+                                                           miPortfolio.personaDTO.celular,
+                                                           miPortfolio.personaDTO.mail,
+                                                           miPortfolio.personaDTO.aniosDeTrabajo,
+                                                           miPortfolio.personaDTO.cantidadDeProyectos,
+                                                           miPortfolio.personaDTO.ubicacion)">
+                                                           
+    </div>
+
+     <!-- Ventana Modal para el Alta de Persona -->
+     <dialog id="personaDialog">
+        <form method="dialog" id="personaForm" #personaForm = "ngForm" (ngSubmit) = "onClickSubmit()">
+            <input type = "hidden" name = "idPersona" ngModel>
+            Lugar:
+            <input type = "text" name = "lugar" ngModel>
+            <br/>
+            Dirección:
+            <input type = "text" name = "direccion" ngModel>
+            <br/>
+            Título:
+            <input type = "text" name = "titulo" ngModel>
+            <br/>
+            Nombre:
+            <input type = "text" name = "nombre" ngModel>
+            <br/>
+            Apellido:
+            <input type = "text" name = "apellido" ngModel>
+            <br/>
+            FechaDeNacimiento:
+            <input type = "text" name = "fechaDeNacimiento" ngModel>
+            <br/>
+            Nacionalidad:
+            <input type = "text" name = "nacionalidad" ngModel>
+            <br/>
+            EstadoCivil:
+            <input type = "text" name = "estadoCivil" ngModel>
+            <br/>
+            Cp:
+            <input type = "text" name = "cp" ngModel>
+            <br/>
+            Celular:
+            <input type = "text" name = "celular" ngModel>
+            <br/>
+            Mail:
+            <input type = "text" name = "mail" ngModel>
+            <br/>
+            AniosDeTrabajo:
+            <input type = "text" name = "aniosDeTrabajo" ngModel>
+            <br/>
+            CantidadDeProyectos:
+            <input type = "text" name = "cantidadDeProyectos" ngModel>
+            <br/>
+            Ubicación:
+            <input type = "text" name = "ubicacion" ngModel>
+            <br/>
+           
+            <br/>
+            <br/>
+            <input type = "submit" value = "Enviar">
+            <br/>
+            <font size="1">(*) Presione "ESC" para cancelar.</font>
+        </form>
+     </dialog>
+
     <div class="about__container bd-grid">
         <div class="about__data">
             <p class="about__description">
-                <b>Hola, soy {{miPortfolio.nombre}}</b><br>
-                Fecha de nacimiento: {{miPortfolio.fecha}}<br>
-                Lugar de nacimiento: {{miPortfolio.lugar}}<br>
-                Dirección: {{miPortfolio.direccion}}<br>
-                Nacionalidad: {{miPortfolio.nacionalidad}}<br>
-                Estado civil: {{miPortfolio.estadoCivil}}<br>
-                CP: {{miPortfolio.cp}}
+                <b>Hola, soy {{miPortfolio.personaDTO.nombre}}</b><br>
+                Lugar de nacimiento: {{miPortfolio.personaDTO.lugar}}<br>
+                Fecha de nacimiento: {{miPortfolio.personaDTO.fechaDeNacimiento}}<br>
+                Dirección: {{miPortfolio.personaDTO.direccion}}<br>
+                Nacionalidad: {{miPortfolio.personaDTO.nacionalidad}}<br>
+                Estado civil: {{miPortfolio.personaDTO.estadoCivil}}<br>
+                CP: {{miPortfolio.personaDTO.cp}}
             </p>
             <img src="assets/img/Tere.JPG" alt="Fournier Teresa" title="Fournier Teresa"
                 class="about__img">
@@ -24,17 +100,17 @@
 
                 <div class="about__information-data">
                     <i class='bx bxs-user about__information-icon'></i>
-                    <span>{{miPortfolio.apellido_y_nombre}}</span>
+                    <span>{{miPortfolio.personaDTO.apellido_y_nombre}}</span>
                 </div>
 
                 <div class="about__information-data">
                     <i class='bx bxs-phone about__information-icon'></i>
-                    <span>{{miPortfolio.celular}} (Móvil)</span>
+                    <span>{{miPortfolio.personaDTO.celular}} (Móvil)</span>
                 </div>
 
                 <div class="about__information-data">
                     <i class='bx bxs-envelope about__information-icon'></i>
-                    <span>{{miPortfolio.mail}}</span>
+                    <span>{{miPortfolio.personaDTO.mail}}</span>
                 </div>
             </div>
 
@@ -44,7 +120,7 @@
                 <div class="about__information-data">
                     <i class='bx bxs-medal about__information-icon'></i>
                     <div>
-                        <span class="about__information-subtitle">{{miPortfolio.anios_de_trabajo}} años de trabajo</span>
+                        <span class="about__information-subtitle">{{miPortfolio.personaDTO.aniosDeTrabajo}} años de trabajo</span>
                         <span class="about__information-subtitle-small">Experiencia</span>
                     </div>
                 </div>
@@ -52,7 +128,7 @@
                 <div class="about__information-data">
                     <i class='bx bxs-briefcase about__information-icon'></i>
                     <div>
-                        <span class="about__information-subtitle">{{miPortfolio.cantidad_de_proyectos}} proyectos</span>
+                        <span class="about__information-subtitle">{{miPortfolio.personaDTO.cantidadDeProyectos}} proyectos</span>
                         <span class="about__information-subtitle-small">Finalizados</span>
                     </div>
                 </div>
@@ -60,4 +136,5 @@
             </div>
         </div>
     </div>
+
 </section>

@@ -1,5 +1,6 @@
 <section class="education section" id="educación">
     <span class="section-subtitle">Aptitud</span>
+
     <h2 class="section-title">Mi Educación</h2>
 
     <div class="education__container bd-grid">
@@ -17,9 +18,43 @@
 
         <div>
             <h3 class="education__race">{{registro.titulo}}</h3>
-            
+            <!-- Botón borrar y editar-->
+            <div align="right" *ngIf=usuarioLogueado()>
+                <img width="20" height="20"
+                src="./assets/img/Eliminar.PNG" 
+                (click)="borrarEstudio(registro.id)">
+                <img width="15" height="15"
+                src="./assets/img/Editar.PNG" (click)="openEditarEstudio(registro.id, 
+                                                                   registro.anio, 
+                                                                   registro.institucion,
+                                                                   registro.titulo)">
+            </div>
         </div>
     </div>
+    </div>
 
-</div>
+    <br>
+    <!-- Botón que abre la ventana modal de alta -->
+    <div align="center" *ngIf=usuarioLogueado()> <button (click)="openMyDialog()">Nueva Educación</button></div>
+
+    <!-- Ventana Modal para el Alta de Estudio -->
+    <dialog id="educacionDialog">
+        <form method="dialog" id="educacionForm" #educacionForm = "ngForm" (ngSubmit) = "onClickSubmit()" >
+            <input type = "hidden" name = "idEstudio" ngModel>
+            Año:
+            <input type = "text" name = "anio" ngModel>
+            <br/>
+            Institución:
+            <input type = "text" name = "institucion" ngModel>
+            <br/>
+            Título:
+            <input type = "text" name = "titulo" ngModel>
+            <br/>
+            <br/>
+            <input type = "submit" value = "Enviar">
+            <br/>
+            <font size="1">(*) Presione "ESC" para cancelar.</font>
+        </form>
+   </dialog>
+
 </section>   

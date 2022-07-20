@@ -15,12 +15,12 @@
 
     /* Colores */
     --first-color: #ee8814d7;
-    --first-color-dark: #f3901fa2;
-    --first-color-darken: #d48611;
-    --text-color: #d3850f;
-    --first-color-light: #EAE7E6;
+    --first-color-dark: #914f03a2;
+    --first-color-darken: #ca7b05;
+    --text-color: #b8740f;
+    --first-color-light: #e6e6ea;
     --first-color-light-dark: #d7dcee;
-    --first-color-lighten: #FFFAFA;
+    --first-color-lighten: #fcfaff;
 
     /* Fuente y Tipografía */
     --body-font: 'Poppins', sans-serif;
@@ -273,7 +273,7 @@ img
     width: 180px;
     height: 180px;
     background-color: var(--first-color);
-    border-radius: 80%;
+    border-radius: 60%;
     overflow: hidden;
     margin-bottom: var(--mb-4);
 }
@@ -555,19 +555,6 @@ img
     transform: translate(5px, -4px);
 }
 
-/* -------------------------------- Cursos Realizados ---------------------------- */
-.cursos__container
-{
-    margin-left: 15px;
-}
-
-.cursos__information-icon
-{
-    font-size: 1.5rem;
-    color: var(--first-color);
-    margin-right: var(--mb-1);
-}
-
 /* ------------------------------------ Servicios ------------------------------- */
 .services__container
 {
@@ -682,7 +669,7 @@ img
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #cf910a;
+    background: #d69405;
     border-radius: .5rem;
     transition: .3s;
 }

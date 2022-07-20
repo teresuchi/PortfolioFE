@@ -4,8 +4,8 @@
 
     <div class="works__container bd-grid">
         <div class="works__img">
-            <img src="assets/img/work-1.jpg" alt="Diseño de Aplicaciones" title="Diseño de Aplicaciones">
-
+            <img src="assets/img/work-1.jpg">
+        
             <div class="works__data">
                 <a href="#" class="works__link"><i class="bx bx-link-alt"></i></a>
                 <span class="works__title">{{miPortfolio.trabajo_1.titulo}}</span>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="works__img">
-            <img src="assets/img/work-4.jpg" alt="Sitio Web de la Agencia" title="Sitio Web de la Agencia">
+            <img src="assets/img/work-4.jpg">
 
             <div class="works__data">
                 <a href="#" class="works__link"><i class="bx bx-link-alt"></i></a>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="works__img">
-            <img src="assets/img/work-6.jpg" alt="Sitio Web de pago" title="Sitio Web de pago">
+            <img src="assets/img/work-6.jpg">
 
             <div class="works__data">
                 <a href="#" class="works__link"><i class="bx bx-link-alt"></i></a>
@@ -30,5 +30,36 @@
             </div>
         </div>
     </div>
+
+    <!-- Botones Editar-->
+    <div align="center" *ngIf=usuarioLogueado()> 
+        <button (click)="openEditarTrabajo(miPortfolio.trabajo_1.id, 
+                                            miPortfolio.trabajo_1.titulo)">Editar trabajo 1</button>
+
+        <button (click)="openEditarTrabajo(miPortfolio.trabajo_2.id, 
+                                        miPortfolio.trabajo_2.titulo)">Editar trabajo 2</button>
+    
+
+        <button (click)="openEditarTrabajo(miPortfolio.trabajo_3.id, 
+                                        miPortfolio.trabajo_3.titulo)">Editar trabajo 3</button>
+    </div>
+
+
+
+     <!-- Ventana Modal para la edición de un Trabajo -->
+     <dialog id="trabajoDialog">
+        <form method="dialog" id="trabajoForm" #servicioForm = "ngForm" (ngSubmit) = "onClickSubmit()" >
+            <input type = "hidden" name = "idTrabajo" ngModel>
+             Título:
+            <input type = "text" name = "titulo" ngModel>
+            <br/>
+            <input type = "submit" value = "Enviar">
+            <br/>
+            <font size="1">(*) Presione "ESC" para cancelar.</font>
+        </form>
+   </dialog>
+ 
 </section>
+
+
 

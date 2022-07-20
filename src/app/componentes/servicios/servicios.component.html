@@ -7,21 +7,65 @@
                     <i class="bx bx-code service__icon"></i>
                     <h3 class="services__title">{{miPortfolio.servicio_1.titulo}}</h3>
                     <p class="services__description">{{miPortfolio.servicio_1.descripcion}}</p>
+            
+
+                    <!-- Botón Editar -->
+                    <div align="center" *ngIf=usuarioLogueado()> <img width="15" height="15"
+                                             src="./assets/img/Editar.PNG" 
+                                             title="Editar Servicio 1"
+                                             (click)="openEditarServicio(miPortfolio.servicio_1.id, 
+                                                                         miPortfolio.servicio_1.descripcion,
+                                                                         miPortfolio.servicio_1.titulo)">
+                    </div> 
                 </div>
 
                 <div class="services__content">
                     <i class="bx bx-mobile service__icon"></i>
                     <h3 class="services__title">{{miPortfolio.servicio_2.titulo}}</h3>
                     <p class="services__description">{{miPortfolio.servicio_2.descripcion}}</p>
+
+                    <!-- Botón Editar-->
+                    <div align="center" *ngIf=usuarioLogueado()> <img width="15" height="15"
+                                            src="./assets/img/Editar.PNG" 
+                                             title="Editar Servicio 2" 
+                                             (click)="openEditarServicio(miPortfolio.servicio_2.id, 
+                                             miPortfolio.servicio_2.descripcion,
+                                             miPortfolio.servicio_2.titulo)">
+                    </div>
                 </div>
 
                 <div class="services__content"> 
                     <i class="bx bx-server service__icon"></i>
                     <h3 class="services__title">{{miPortfolio.servicio_3.titulo}}</h3>
                     <p class="services__description">{{miPortfolio.servicio_3.descripcion}}</p>
+
+                    <!-- Botón Editar-->
+                    <div align="center" *ngIf=usuarioLogueado()> <img width="15" height="15"
+                                             src="./assets/img/Editar.PNG" 
+                                             title="Editar Servicio 3" 
+                                             (click)="openEditarServicio(miPortfolio.servicio_3.id, 
+                                                                         miPortfolio.servicio_3.descripcion,
+                                                                         miPortfolio.servicio_3.titulo)">
+                    </div>
                 </div>
 
-               
             </div>
-        </section>
+        
+            
+            <!-- Ventana Modal para la edición de un Servicio -->
+            <dialog id="servicioDialog">
+                <form method="dialog" id="servicioForm" #servicioForm = "ngForm" (ngSubmit) = "onClickSubmit()" >
+                    <input type = "hidden" name = "idServicio" ngModel>
+                     Título:
+                    <input type = "text" name = "titulo" ngModel>
+                    <br/>
+                    Descripción:
+                    <input type = "text" name = "descripcion" ngModel>
+                    <br/>
+                    <input type = "submit" value = "Enviar">
+                    <br/>
+                    <font size="1">(*) Presione "ESC" para cancelar.</font>
+                </form>
+           </dialog>
+</section>
 

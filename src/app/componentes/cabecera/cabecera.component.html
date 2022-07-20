@@ -5,7 +5,7 @@
         </div>
 
         <div>
-            <a href="#" class="nav__logo">Fournier Teresa</a>
+            <a href="#" class="nav__logo">Fournier Teresa</a>            
         </div>
 
         <div class="nav__menu" id="nav-menu">
@@ -16,13 +16,15 @@
             <ul class="nav__list">
                 <!-- El primer elemento de la lista de links es el logo de Argentina Programa -->
                 <li class="nav__item">
-                    <div  class="logo__img">
+                    <div  class="logo__img" >
                     <a href="https://argentinaprograma.inti.gob.ar/" class="nav__link"> 
-                        <img src="assets/img/Captura.PNG" alt="Argentina Programa" title="Argentina Programa">
+                        <img src="assets/img/LogoArgentinaPrograma.PNG" alt="Argentina Programa" title="Argentina Programa">
+                        <a href="#" class="nav__link" *ngIf=!usuarioLogueado() (click)="openMyDialog()"> Log in </a>
+                        <a href="#" class="nav__link" *ngIf=usuarioLogueado() (click)="desloguear()"> Log out </a>                     
                     </a>
                     </div>
                 </li>
-                <li class="nav__item"> <a href="#home" class="nav__link active"> Inicio </a></li>
+                <li class="nav__item"> <a href="#home" class="nav__link"> Inicio </a></li>
                 <li class="nav__item"> <a href="#about" class="nav__link"> Sobre mí </a></li>
                 <li class="nav__item"> <a href="#skills" class="nav__link"> Habilidades </a></li>
                 <li class="nav__item"> <a href="#educación" class="nav__link"> Educación </a></li>
@@ -32,4 +34,23 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Ventana Modal para el log in -->
+    <dialog id="cabeceraDialog">
+        <form method="dialog" id="cabeceraForm" #cabeceraForm = "ngForm" (ngSubmit) = "onClickSubmit()">
+            Usuario:
+            <input type = "text" name = "usuario" ngModel>
+            <br/>
+            Password:
+            <input type = "text" name = "password" ngModel>
+            <br/>
+            <br/>
+            <input type = "submit" value = "Enviar">
+            <br/>
+            <font size="1">(*) Presione "ESC" para cancelar.</font>
+        </form>
+   </dialog>
+
+  
+
 </header>
