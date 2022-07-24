@@ -108,7 +108,7 @@ export class AcercaDeComponent implements OnInit {
     
   }
 
-  //Devuelve true si el usuario esta logueado, false si no lo esta
+  //Devuelve true si el usuario esta logueado, false si no lo está.
   usuarioLogueado():boolean{
     return this.autenticacionService.usuarioLogueado();
   }
