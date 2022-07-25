@@ -45,18 +45,27 @@ desloguear(){
 onClickSubmit(){
     //Obtengo los datos del formulario y armo el JSON con ellos.
     let myForm:any = <any>document.getElementById("cabeceraForm");   
-    var jsonAenviar: String = JSON.stringify({usuario:myForm.usuario.value,
-                                              password:myForm.password.value});
+    var formUser = myForm.usuario.value;
+    var formPass = myForm.password.value;
+    var jsonAenviar: String = JSON.stringify({usuario: formUser,
+                                              password: formPass});
 
     //Obtengo la ventana Dialog y le digo que se cierre.
     let myDialog:any = <any>document.getElementById("cabeceraDialog");
     myDialog.close();
 
-    //Invoco al servicio de login.
-    this.autenticacionService.IniciarSesion(jsonAenviar).subscribe();
+    //Chequeo que el usuario y password sean válidos.
+    //IMPORTANTE: resuelvo en el FE, pero claramente debería resolverse en el BE.
+    if (formUser == "admin" && formPass == "admin"){
+        //Invoco al servicio de login.
+        this.autenticacionService.IniciarSesion(jsonAenviar).subscribe();
 
-    //Refresco la componente.
-    window.location.reload();
+        //Refresco la componente.
+        window.location.reload();
+    } else{
+        //Indico que el password es inválido.
+        alert("El usuario/pasword ingresado es inválido");
+    }
     
     /*  ORIGINAL TAL CUAL EL VIDEO
     this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
