@@ -1,0 +1,17 @@
+[debug] [2022-07-24T17:16:55.500Z] ----------------------------------------------------------------------
+[debug] [2022-07-24T17:16:55.502Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Diego\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js --project portfoliofe-9bccb functions:log -n 250
+[debug] [2022-07-24T17:16:55.503Z] CLI Version:   11.3.0
+[debug] [2022-07-24T17:16:55.503Z] Platform:      win32
+[debug] [2022-07-24T17:16:55.503Z] Node Version:  v16.13.2
+[debug] [2022-07-24T17:16:55.504Z] Time:          Sun Jul 24 2022 14:16:55 GMT-0300 (Argentina Standard Time)
+[debug] [2022-07-24T17:16:55.504Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-24T17:16:55.566Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-24T17:16:55.567Z] > authorizing via signed-in user (teresafournier80@gmail.com)
+[debug] [2022-07-24T17:16:55.567Z] [iam] checking project portfoliofe-9bccb for permissions ["firebase.projects.get","logging.logEntries.list","logging.logs.list"]
+[debug] [2022-07-24T17:16:55.569Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfoliofe-9bccb:testIamPermissions [none]
+[debug] [2022-07-24T17:16:55.569Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfoliofe-9bccb:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2022-07-24T17:16:56.405Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfoliofe-9bccb:testIamPermissions 200
+[debug] [2022-07-24T17:16:56.405Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfoliofe-9bccb:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2022-07-24T17:16:56.406Z] >>> [apiv2][query] POST https://logging.googleapis.com/v2/entries:list [none]
+[debug] [2022-07-24T17:16:56.406Z] >>> [apiv2][body] POST https://logging.googleapis.com/v2/entries:list {"resourceNames":["projects/portfoliofe-9bccb"],"filter":"resource.type=\"cloud_function\" OR (resource.type=\"cloud_run_revision\" AND labels.\"goog-managed-by\"=\"cloudfunctions\")","orderBy":"timestamp desc","pageSize":"250"}

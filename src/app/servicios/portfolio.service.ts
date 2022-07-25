@@ -14,15 +14,15 @@ export class PortfolioService {
   /** GET: invoca al GET de Portfolio del Backend. */
   obtenerDatos():Observable<any>{  
     //return this.http.get('./assets/data/data.json');   
-    //return this.http.get<any>('http://localhost:8080/portfolio');        
-    return this.http.get<any>('http://rocky-falls-56185.herokuapp.com/portfolio');        
+    //return this.http.get<any>('https://localhost:8080/portfolio');        
+    return this.http.get<any>('https://rocky-falls-56185.herokuapp.com/portfolio');        
   }
 
 
   /** POST: invoca al POST de Persona del Backend. */
   crearPersona(jsonAenviar: String): Observable<any> {
-    //const urlServicio = 'http://localhost:8080/personas/crear';
-    const urlServicio = 'http://rocky-falls-56185.herokuapp.com/personas/crear';    
+    //const urlServicio = 'https://localhost:8080/personas/crear';
+    const urlServicio = 'https://rocky-falls-56185.herokuapp.com/personas/crear';    
     const body = jsonAenviar;
     const httpOptions = {
             headers: new HttpHeaders({
@@ -41,8 +41,8 @@ export class PortfolioService {
  */
 
  salvarContacto(jsonAenviar: String): Observable<any> {
- // const urlContacto = 'http://localhost:8080/contacto/salvar';
-  const urlContacto = 'http://rocky-falls-56185.herokuapp.com/contacto/salvar'; 
+ // const urlContacto = 'https://localhost:8080/contacto/salvar';
+  const urlContacto = 'https://rocky-falls-56185.herokuapp.com/contacto/salvar'; 
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
@@ -59,8 +59,8 @@ export class PortfolioService {
  *  Si id es null, cumple la función de POST.
  */
 salvarEstudio(jsonAenviar: String): Observable<any> {
-  //const urlServicio = 'http://localhost:8080/estudio/salvar';
-  const urlServicio = 'http://rocky-falls-56185.herokuapp.com/estudio/salvar';  
+  //const urlServicio = 'https://localhost:8080/estudio/salvar';
+  const urlServicio = 'https://rocky-falls-56185.herokuapp.com/estudio/salvar';  
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
@@ -75,8 +75,8 @@ salvarEstudio(jsonAenviar: String): Observable<any> {
 
 /** DELETE: invoca al Delete de Estudio del Backend. */
 borrarEstudio(idEstudio: number): Observable<any> {
-  //const urlServicio = 'http://localhost:8080/estudio/borrar/';
-  const urlServicio = 'http://rocky-falls-56185.herokuapp.com/estudio/borrar/';  
+  //const urlServicio = 'https://localhost:8080/estudio/borrar/';
+  const urlServicio = 'https://rocky-falls-56185.herokuapp.com/estudio/borrar/';  
   return this.http.delete<any>(urlServicio + idEstudio);
 }
 
@@ -87,8 +87,8 @@ borrarEstudio(idEstudio: number): Observable<any> {
  */
 
 salvarHabilidad(jsonAenviar: String): Observable<any> {
-  //const urlServicio = 'http://localhost:8080/habilidad/salvar';
-  const urlServicio = 'http://rocky-falls-56185.herokuapp.com/habilidad/salvar';  
+  //const urlServicio = 'https://localhost:8080/habilidad/salvar';
+  const urlServicio = 'https://rocky-falls-56185.herokuapp.com/habilidad/salvar';  
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
@@ -103,8 +103,8 @@ salvarHabilidad(jsonAenviar: String): Observable<any> {
 
 /** DELETE: invoca al Delete de Habilidad del Backend. */
 borrarHabilidad(idHabilidad: number): Observable<any> {
-//  const urlServicio = 'http://localhost:8080/habilidad/borrar/';
-  const urlServicio = 'http://rocky-falls-56185.herokuapp.com/habilidad/borrar/';
+//  const urlServicio = 'https://localhost:8080/habilidad/borrar/';
+  const urlServicio = 'https://rocky-falls-56185.herokuapp.com/habilidad/borrar/';
   return this.http.delete<any>(urlServicio + idHabilidad);
 }
 
@@ -115,7 +115,7 @@ borrarHabilidad(idHabilidad: number): Observable<any> {
  */
 
  salvarServicio(jsonAenviar: String): Observable<any> {
-  const urlServicio = 'http://rocky-falls-56185.herokuapp.com/servicio/salvar';
+  const urlServicio = 'https://rocky-falls-56185.herokuapp.com/servicio/salvar';
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
@@ -135,7 +135,7 @@ borrarHabilidad(idHabilidad: number): Observable<any> {
  */
 
  salvarPersona(jsonAenviar: String): Observable<any> {
-  const urlPersona = 'http://rocky-falls-56185.herokuapp.com/persona/salvar';
+  const urlPersona = 'https://rocky-falls-56185.herokuapp.com/persona/salvar';
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
@@ -154,7 +154,7 @@ borrarHabilidad(idHabilidad: number): Observable<any> {
  */
 
  salvarTrabajo(jsonAenviar: String): Observable<any> {
-  const urlTrabajo = 'http://rocky-falls-56185.herokuapp.com/trabajo/salvar';
+  const urlTrabajo = 'https://rocky-falls-56185.herokuapp.com/trabajo/salvar';
   const body = jsonAenviar;
   const httpOptions = {
           headers: new HttpHeaders({
