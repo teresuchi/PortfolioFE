@@ -6,4 +6,4 @@ Por alguna razón que no he podido encontrar, todas las operaciones funcionan pe
 
 En la carpeta "VideosEvidencia" dejo videos cortos grabados en mi ambiente LOCAL, para dar cuenta del correcto funcionamiento de todas las operaciones. Estos videos son formato .webm, por lo que pueden reproducirse simplemente arrastrándolos al navegador Web.
 
-Muchas Gracias!
+¡Muchas Gracias!
